@@ -12,51 +12,49 @@
             grid-template-columns: repeat(12, minmax(50px, 100px));
             grid-template-rows: repeat(10, 50px);
         }
-        .item1 {
+        .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
+        }
+        .item1 {
             grid-column: 1 / 4;
             background-color: rgb(248, 248, 149);
             border: 2px solid rgb(187, 187, 73);
         }
         .item2 {
-            text-align: center;
             background-color: lightskyblue;
             border: 2px solid blue;
             grid-column: 4 / 13;
         }
         .item3 {
-            text-align: center;
             background-color: lightgreen;
             border: 2px solid green;
             grid-area: 2 / 1 / 6 / 13;
         }
         .item4 {
-            text-align: center;
             background-color: rgb(202, 180, 218);
             border: 2px solid rgb(200, 130, 238);
             grid-area: 6 / 1 / 10 / 6;
         }
         .item5 {
-            text-align: center;
             background-color: rgb(222, 211, 127);
             border: 2px solid rgb(202, 166, 35);
             grid-area: 6 / 6 / 8 / 9;
         }
         .item6 {
-            text-align: center;
             background-color: rgb(242, 183, 151);
             border: 2px solid rgb(180, 115, 107);
             grid-area: 6 / 9 / 8 / 13;
         }
         .item7 {
-            text-align: center;
             color: white;
             background-color: rgb(9, 117, 160);
             border: 2px solid rgb(24, 34, 109);
             grid-area: 8 / 6 / 10 / 13;
         }
         .item8 {
-            text-align: center;
             background-color: rgb(93, 148, 107);
             border: 2px solid rgb(38, 95, 48);
             grid-area: 10 / 1 / 11 / 13;
@@ -65,14 +63,14 @@
 </head>
 <body>
     <div class="container">
-        <div class="item1">LOGO</div>
-        <div class="item2">MENU</div>
-        <div class="item3">HEADER</div>
-        <div class="item4">CONTENT</div>
-        <div class="item5">CONTENT</div>
-        <div class="item6">IMAGE</div>
-        <div class="item7">EXTRA</div>
-        <div class="item8">FOOTER</div>
+        <div class="item item1">LOGO</div>
+        <div class="item item2">MENU</div>
+        <div class="item item3">HEADER</div>
+        <div class="item item4">CONTENT</div>
+        <div class="item item5">CONTENT</div>
+        <div class="item item6">IMAGE</div>
+        <div class="item item7">EXTRA</div>
+        <div class="item item8">FOOTER</div>
     </div>
 </body>
 </html>
