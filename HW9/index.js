@@ -53,23 +53,24 @@ const creature = { name: 'Ctulhu', eyes: 8 };
 
 // Решение
 
+persons[1].sayHello.call(creature)
 
 // 4. напишите функцию которая принимает коллбэк (метод .sayHello() любого объекта из массива) эта функция должна выводить сообщение вида "Ladies and Gentlemen, here is our person: " после чего должна запускать коллбэк (метод .sayHello() любого объекта из массива) пример:
-presentation(persons[0].sayHello) // возможно тут при передаче коллбэка что-то надо поменять
-// =====>>>>>
-"Ladies and Gentlemen, here is our person: "
-"Hello! My name is One" // это результат запуска коллбэка persons[0].sayHello
+// presentation(persons[0].sayHello) // возможно тут при передаче коллбэка что-то надо поменять
+// // =====>>>>>
+// "Ladies and Gentlemen, here is our person: "
+// "Hello! My name is One" // это результат запуска коллбэка persons[0].sayHello
 
-presentation(persons[1].sayHello) // возможно тут при передаче коллбэка что-то надо поменять
-// =====>>>>>
-"Ladies and Gentlemen, here is our person: "
-"Hello! My name is Two" // это результат запуска коллбэка persons[1].sayHello
+// presentation(persons[1].sayHello) // возможно тут при передаче коллбэка что-то надо поменять
+// // =====>>>>>
+// "Ladies and Gentlemen, here is our person: "
+// "Hello! My name is Two" // это результат запуска коллбэка persons[1].sayHello
 
 // Решение
 
 function presentation(callback) {
   console.log("Ladies and Gentlemen, here is our person: ");
-  callback.call();
+  callback();
 }
 presentation(persons[0].sayHello.bind(persons[0]));
 presentation(persons[1].sayHello.bind(persons[1]));
