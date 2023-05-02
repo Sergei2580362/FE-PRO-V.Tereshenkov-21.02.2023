@@ -32,54 +32,28 @@ console.log(Oleg.toString())
 // Решение
 
 const Programmers = [
-    {
-        name: 'Petya',
-        stack: ['Python', 'PHP', 'Java', 'JS', 'Ruby', 'Visual Basic', 'Dylan', 'C++'],
-    },
-    {
-        name: 'Vasya', 
-        stack: ['Python', 'Ruby', 'Visual Basic', 'Dylan', 'C++'],
-    },
-    {
-        name: 'Iluha',
-        stack: ['Python', 'PHP', 'Java', 'JS', 'Ruby', 'Dylan', 'C++'],
-    },
-    {
-        name: 'Gleb',
-        stack: ['Visual Basic', 'Dylan', 'C++'],
-    },
-    {
-        name: 'Anatolii',
-        stack: ['JS', 'Ruby', 'Visual Basic', 'Dylan', 'C++'],
-    },
-    {
-        name: 'Andrei',
-        stack: ['PHP', 'Java', 'Ruby', 'C++'],
-    },
-    {
-        name: 'Sergei',
-        stack: ['JS', 'Ruby', 'Visual Basic', 'Dylan', 'C++'],
-    },
-    {
-        name: 'Maks',
-        stack: ['Python', 'Java', 'JS', 'Dylan'],
-    },
-    {
-        name: 'Vovan',
-        stack: ['PHP', 'Java', 'JS', 'Ruby', 'Visual Basic', 'Dylan', 'C++'],
-    },
-    {
-        name: 'Vlad',
-        stack: ['Python', 'JS', 'Ruby', 'C++'],
-    },
+    new Programmer ('Petya', ['Python', 'PHP', 'Java', 'JS', 'Ruby', 'Visual Basic', 'Dylan', 'C++']),
+    new Programmer ('Vasya', ['Python', 'Ruby', 'Visual Basic', 'Dylan', 'C++']),
+    new Programmer ('Iluha', ['Python', 'PHP', 'Java', 'JS', 'Ruby', 'Dylan', 'C++']),
+    new Programmer ('Gleb', ['Visual Basic', 'Dylan', 'C++']),
+    new Programmer ('Anatolii', ['JS', 'Ruby', 'Visual Basic', 'Dylan', 'C++']),
+    new Programmer ('Andrei', ['PHP', 'Java', 'Ruby', 'C++']),
+    new Programmer ('Sergei', ['JS', 'Ruby', 'Visual Basic', 'Dylan', 'C++']),
+    new Programmer ('Maks', ['Python', 'Java', 'JS', 'Dylan']),
+    new Programmer ('Vovan', ['PHP', 'Java', 'JS', 'Ruby', 'Visual Basic', 'Dylan', 'C++']),
+    new Programmer ('Vlad', ['Python', 'JS', 'Ruby', 'C++']),
 ];
 
 function getSeniorDeveloper(programmers) {
-    return programmers.filter((programmer) => programmer.stack.length > 4);
+    return programmers.filter(programmer => programmer.stack.length > 4);
 }
   
 const filteredProgrammers = getSeniorDeveloper(Programmers);
 console.log(filteredProgrammers);
+
+filteredProgrammers.forEach(programmer => programmer.code());
+
+filteredProgrammers.forEach(programmer => console.log(programmer.toString()));
 
 // 3. Напишите функцию, которая вычисляет длину линий в стандартной двухмерной системе координат. Координаты начала и конца линий должны храниться в объектах.
 
